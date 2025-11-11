@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -75,6 +74,6 @@ class ResetPasswordActivity : AppCompatActivity() {
     private fun resetPassword(newPassword: String) {
         Toast.makeText(this, "Đặt lại mật khẩu thành công!", Toast.LENGTH_LONG).show()
 
-        finishAffinity()
+        finish()
     }
 }
