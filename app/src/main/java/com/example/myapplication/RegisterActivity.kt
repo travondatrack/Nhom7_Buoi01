@@ -1,5 +1,6 @@
-package com.example.project
+package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
@@ -46,7 +47,9 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun navigateToLogin() {
-        toast("Navigate to login")
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun toast(msg: String) {
