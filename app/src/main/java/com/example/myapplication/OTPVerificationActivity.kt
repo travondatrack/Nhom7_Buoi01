@@ -118,7 +118,7 @@ class OTPVerificationActivity : AppCompatActivity() {
                 finishAffinity() 
             }
             OtpFlow.FORGOT_PASSWORD -> {
-                // Còn khúc này chuyển tới màn hình Nhập password mới nè
+                // Chuyển tới màn hình đặt lại mật khẩu
                 val intent = Intent(this, ResetPasswordActivity::class.java)
                 intent.putExtra("email", intent.getStringExtra("email"))
                 startActivity(intent)
