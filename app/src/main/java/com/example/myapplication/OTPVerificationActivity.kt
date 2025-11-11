@@ -92,7 +92,7 @@ class OTPVerificationActivity : AppCompatActivity() {
             if (text?.length == 1) {
                 otp5.requestFocus()
             } else if (text?.isEmpty() == true && before == 1) {
-                otp6.requestFocus()
+                otp3.requestFocus()
             }
         }
         otp5.doOnTextChanged { text, start, before, count ->
