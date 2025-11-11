@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
-
+import android.widget.Button
+import android.widget.TextView
 import android.view.View
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +22,18 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val btnLogin  = findViewById<Button>(R.id.btnLogin )
+        val tvForgot = findViewById<TextView>(R.id.tvForgot)
+        btnLogin .setOnClickListener {
+            Toast.makeText(this, " Đăng nhập thành công!", Toast.LENGTH_SHORT).show()
+        }
         val intent = Intent(this@MainActivity, OTPVerificationActivity::class.java)
         startActivity(intent)
         finish()
+        tvForgot.setOnClickListener {
+            val intent = Intent(this@MainActivity, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
