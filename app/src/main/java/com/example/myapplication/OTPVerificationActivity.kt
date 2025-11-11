@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -118,6 +119,9 @@ class OTPVerificationActivity : AppCompatActivity() {
             }
             OtpFlow.FORGOT_PASSWORD -> {
                 // Còn khúc này chuyển tới màn hình Nhập password mới nè
+                val intent = Intent(this, ResetPasswordActivity::class.java)
+                intent.putExtra("email", intent.getStringExtra("email"))
+                startActivity(intent)
                 finish()
             }
         }
