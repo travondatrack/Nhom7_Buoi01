@@ -43,6 +43,7 @@ class RegisterActivity : AppCompatActivity() {
             else -> {
                 toast("Registered: $username")
                 val intent = Intent(this, OTPVerificationActivity::class.java)
+                intent.putExtra("email", email)
                 intent.putExtra(OtpFlow.FLOW_TYPE, OtpFlow.REGISTER)
                 startActivity(intent)
             }
