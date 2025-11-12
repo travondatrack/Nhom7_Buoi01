@@ -75,6 +75,8 @@ class ResetPasswordActivity : AppCompatActivity() {
     private fun resetPassword(newPassword: String) {
         Toast.makeText(this, "Password reset successfully!", Toast.LENGTH_LONG).show()
 
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
         finishAffinity()
     }
 }

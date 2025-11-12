@@ -115,7 +115,9 @@ class OTPVerificationActivity : AppCompatActivity() {
         when (currentFlow) {
             OtpFlow.REGISTER -> {
                 // khúc này chuyển tới màn hình login nè
-                finishAffinity() 
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finishAffinity()
             }
             OtpFlow.FORGOT_PASSWORD -> {
                 // Chuyển tới màn hình đặt lại mật khẩu

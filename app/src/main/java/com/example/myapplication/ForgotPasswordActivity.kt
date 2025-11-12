@@ -70,6 +70,5 @@ class ForgotPasswordActivity : AppCompatActivity() {
         intent.putExtra("email", email)
         intent.putExtra(OtpFlow.FLOW_TYPE, OtpFlow.FORGOT_PASSWORD)
         startActivity(intent)
-        finish()
     }
 }
