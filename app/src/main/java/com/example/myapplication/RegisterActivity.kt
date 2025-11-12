@@ -42,6 +42,9 @@ class RegisterActivity : AppCompatActivity() {
             password.length < 6 -> toast("Password >= 6 chars")
             else -> {
                 toast("Registered: $username")
+                val intent = Intent(this, OTPVerificationActivity::class.java)
+                intent.putExtra(OtpFlow.FLOW_TYPE, OtpFlow.REGISTER)
+                startActivity(intent)
             }
         }
     }
@@ -51,8 +54,9 @@ class RegisterActivity : AppCompatActivity() {
         startActivity(intent)
         finishAffinity()
     }
-
     private fun toast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
+
+
 }
