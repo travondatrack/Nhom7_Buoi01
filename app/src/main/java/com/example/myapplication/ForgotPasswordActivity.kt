@@ -51,12 +51,12 @@ class ForgotPasswordActivity : AppCompatActivity() {
 
     private fun validateEmail(email: String): Boolean {
         if (email.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập email", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please enter an email", Toast.LENGTH_SHORT).show()
             return false
         }
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            Toast.makeText(this, "Email không hợp lệ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Invalid email", Toast.LENGTH_SHORT).show()
             return false
         }
 
@@ -64,7 +64,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     private fun sendOTPToEmail(email: String) {
-        Toast.makeText(this, "OTP đã được gửi đến email: $email", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "OTP has been sent to: $email", Toast.LENGTH_SHORT).show()
 
         val intent = Intent(this, OTPVerificationActivity::class.java)
         intent.putExtra("email", email)

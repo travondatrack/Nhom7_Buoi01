@@ -50,22 +50,22 @@ class ResetPasswordActivity : AppCompatActivity() {
 
     private fun validatePasswords(newPassword: String, confirmPassword: String): Boolean {
         if (newPassword.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập mật khẩu mới", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please enter a new password", Toast.LENGTH_SHORT).show()
             return false
         }
 
         if (newPassword.length < 6) {
-            Toast.makeText(this, "Mật khẩu phải có ít nhất 6 ký tự", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Password must be at least 6 characters", Toast.LENGTH_SHORT).show()
             return false
         }
 
         if (confirmPassword.isEmpty()) {
-            Toast.makeText(this, "Vui lòng xác nhận mật khẩu", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please confirm the password", Toast.LENGTH_SHORT).show()
             return false
         }
 
         if (newPassword != confirmPassword) {
-            Toast.makeText(this, "Mật khẩu xác nhận không khớp", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Confirmation password does not match", Toast.LENGTH_SHORT).show()
             return false
         }
 
@@ -73,7 +73,7 @@ class ResetPasswordActivity : AppCompatActivity() {
     }
 
     private fun resetPassword(newPassword: String) {
-        Toast.makeText(this, "Đặt lại mật khẩu thành công!", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Password reset successfully!", Toast.LENGTH_LONG).show()
 
         finishAffinity()
     }
